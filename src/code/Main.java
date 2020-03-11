@@ -31,6 +31,25 @@ public class Main {
 		hello = hello.toLowerCase();
 		System.out.println(hello);  // 출력 : hello world!!
 		
+//		< split >
+//		1. 신상정보를 String배열로 받아 따로 출력
+		String userInfo = "이사랑,1996,010-1111-2222";
+		// ,를 기준으로 쪼개서 String배열로 받기
+		// String변수.split("분리기준")
+		//  => String변수 분리기준은 ","뿐 아니라 한글자가 아닌 것도 가능 (ex. /##/)
+		String[] userInfoArray = userInfo.split(",");
+		// userInfoArray 출력
+		System.out.println(userInfoArray[0]);  // 출력 : 이사랑
+		System.out.println(userInfoArray[1]);  // 출력 : 1996
+		System.out.println(userInfoArray[2]);  // 출력 : 010-1111-2222
+
+//		2. 해시태그 출력
+		String hashTagStr = "우리집/./강아지/./바니";
+		String[] tags = hashTagStr.split("/./");
+		for (String tag : tags) {
+			System.out.println(String.format("#%s", tag));
+		}
+		// 출력 : #우리집   #강아지   #바니
 	}
 
 }
