@@ -67,7 +67,14 @@ public class Main {
 		System.out.println(newSubjectInfo);  // 출력 : 2교시는 수학입니다.
 		
 		
-
+//		< 응용문제. 학생 수 출력 >
+//		1. studentListStr에 적힌 사람 수 출력
+		String studentListStr = "김**,이**,박**,최**,황**,서**,유**,정**,장**,왕**,양**,민**,지**";
+		// 변수 쪼개서 배열로 받기 (,로 분리)
+		String[] studentListStrArray = studentListStr.split(",");
+		// String.format으로 출력양식 작성 후, 배열길이를 변수로 넣기
+		System.out.println(String.format("학생은 총 %d명입니다.", studentListStrArray.length));
+		// 출력 : 학생은 총 13명입니다.
 	}
 
 }
