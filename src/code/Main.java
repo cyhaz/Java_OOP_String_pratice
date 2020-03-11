@@ -24,12 +24,14 @@ public class Main {
 		String message = String.format("%s - %d세, %.1fcm", name, age, height);
 		System.out.println(message);  // 출력 : 이사랑 - 25세, 170.3cm
 		
+		
 //		< String 객체지향 응용문제 >
 //		1. hello 변수를 모두 소문자로 출력
 		String hello = "Hello World!!";
 		// String class의 toLowerCase() 메쏘드 사용
 		hello = hello.toLowerCase();
 		System.out.println(hello);  // 출력 : hello world!!
+		
 		
 //		< split >
 //		1. 신상정보를 String배열로 받아 따로 출력
@@ -50,6 +52,22 @@ public class Main {
 			System.out.println(String.format("#%s", tag));
 		}
 		// 출력 : #우리집   #강아지   #바니
+		
+//		< replace() >
+//		1. replace()로 교시 확인하기
+		// 1교시는 국어 / 2교시는 수학
+		// 변경할변수.replace("찾을문구", "바꿔줄문구")
+		// => 찾을문구를 찾아서 바꿔줄문구로 치환 (원본을 바꾸는게 아닌, 바뀐 새로운 문장을 리턴)
+		String classnInfo = "1교시는 국어입니다.";
+		String newPeriodInfo = classnInfo.replace("1", "2");
+		String newSubjectInfo = newPeriodInfo.replace("국어", "수학");
+		// 출력
+		System.out.println(classnInfo);  // 출력 : 1교시는 국어입니다.
+		System.out.println(newPeriodInfo);  // 출력 : 2교시는 국어입니다.
+		System.out.println(newSubjectInfo);  // 출력 : 2교시는 수학입니다.
+		
+		
+
 	}
 
 }
