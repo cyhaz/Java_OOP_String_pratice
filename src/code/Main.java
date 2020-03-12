@@ -75,6 +75,18 @@ public class Main {
 		// String.format으로 출력양식 작성 후, 배열길이를 변수로 넣기
 		System.out.println(String.format("학생은 총 %d명입니다.", studentListStrArray.length));
 		// 출력 : 학생은 총 13명입니다.
+		
+//		2. studentListStr에 적힌 "이"씨 학생은 몇 명일까?
+		int leeCount = 0;
+		// for문으로 studentListArray에서 학생 이름을 하나씩 꺼내보기 -> studentName에 담기
+		for (String studentName : studentListStrArray) {
+			// startsWith(찾는내용) => 배열에서 꺼낸 이름 중 찾는내용으로 "시작"하는 이름을 찾으면 leeCount++;
+			if (studentName.startsWith("이")) {
+				leeCount++;
+			}
+		}
+		System.out.println(String.format("이씨 학생은 총 %d명입니다.", leeCount));
+		// 출력 : 이씨 학생은 총 1명입니다.
 	}
 
 }
